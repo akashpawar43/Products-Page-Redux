@@ -1,6 +1,6 @@
 
-<h1 align="center" style="border-bottom: none;">Users and Profile app</h1>
-<h3 align="center">Delivering Users and their Profile, our website keeps you informed about people and their professions, Contacts, and connection With Loading Screen.</h3>
+<h1 align="center" style="border-bottom: none;">Products app</h1>
+<h3 align="center">Delivering Products and their Details, our website keeps you informed about their prices and discounts, category, and description With Loading Screen.</h3>
 
 <h2>🧐 Features</h2>
 
@@ -14,10 +14,12 @@ Here're some of the project's best features:
 # Technology We Used :computer: 
 
 1. React.js
-2. dummy API
-3. HTML5
-4. CSS3
-5. JavaScript
+2. Redux toolkit
+3. React Redux
+4. dummy API
+5. HTML5
+6. CSS3
+7. JavaScript
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://akashpawar43.netlify.app/)
