@@ -7,7 +7,7 @@
 Here're some of the project's best features:
 
 *   Get Products
-*   Display Product
+*   Display Products
 *   Navigate Project
 *   Products Page (single)
 

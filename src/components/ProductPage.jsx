@@ -1,34 +1,33 @@
 import '../app.css'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { getSingleProduct } from '../redux/productSlice';
 
 export default function ProductPage() {
-    const [product, setProduct] = useState([]);
     const params = useParams();
-
-    const handleData = async () => {
-        const res = await axios.get(`https://dummyjson.com/products/${params.id}`);
-        setProduct(res.data);
-    }
+    const dispatch = useDispatch();
+    const products = useSelector((state) => state.products)
 
     useEffect(() => {
-        handleData()
-    }, [])
+        dispatch(
+            getSingleProduct({ id: params.id }))
+    }, [dispatch])
 
-    // console.log(product);
+    console.log(products);
 
     return (
         <>
             <div className='bg__black'>
                 <div className=' container'>
-                    <h1>{product.title}</h1>
-                    <img className='prod__single__img' src={product.thumbnail} alt="" />
-                    <span>Brand: {product.brand}</span>
-                    <span>Category: {product.category}</span>
-                    <span>Price: ${product.price}</span>
-                    <span>DiscountPercentage: ${product.discountPercentage}</span>
-                    <span>{product.description}</span>
+                    <h1>{products.title}</h1>
+                    <img className='prod__single__img' src={products.thumbnail} alt="" />
+                    <span>Brand: {products.brand}</span>
+                    <span>Category: {products.category}</span>
+                    <span>Price: ${products.price}</span>
+                    <span>DiscountPercentage: ${products.discountPercentage}</span>
+                    <span>{products.description}</span>
                 </div>
             </div>
         </>
