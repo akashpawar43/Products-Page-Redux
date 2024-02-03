@@ -21,13 +21,18 @@ export default function ProductPage() {
         <>
             <div className='bg__black'>
                 <div className=' container'>
-                    <h1>{products.title}</h1>
-                    <img className='prod__single__img' src={products.thumbnail} alt="" />
-                    <span>Brand: {products.brand}</span>
-                    <span>Category: {products.category}</span>
-                    <span>Price: ${products.price}</span>
-                    <span>DiscountPercentage: ${products.discountPercentage}</span>
-                    <span>{products.description}</span>
+                    {products.title ?
+                        <>
+                            <h1>{products.title}</h1>
+                            <img className='prod__single__img' src={products.thumbnail} alt={products.title} />
+                            <span>Brand: {products.brand}</span>
+                            <span>Category: {products.category}</span>
+                            <span>Price: ${products.price}</span>
+                            <span>DiscountPercentage: ${products.discountPercentage}</span>
+                            <span>{products.description}</span>
+                        </> :
+                        <p>Loading...</p>
+                    }
                 </div>
             </div>
         </>
